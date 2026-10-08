@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="fa" dir="rtl">
 
 <head>
+    <meta charset="UTF-8">
     <title>اعضای سفر</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -26,28 +27,24 @@
 
         <h2 class="title">اعضای گروه</h2>
 
-        <section class="cards">
+        <section class="cards" id="members-cards-container"></section>
 
-            <div class="card">
-                <h3>علی</h3>
-                <p>مسئول هماهنگی سفر</p>
-            </div>
-
-            <div class="card">
-                <h3>سارا</h3>
-                <p>عضو گروه</p>
-            </div>
-
-            <div class="card">
-                <h3>امیر</h3>
-                <p>عضو گروه</p>
-            </div>
-
+        
+        <section class="info">
+            <h2>تعداد اعضا</h2>
+            <p id="member-count-text">در این سفر ۰ نفر حضور دارند.</p>
         </section>
 
         <section class="info">
-            <h2>تعداد اعضا</h2>
-            <p>در این سفر ۳ نفر حضور دارند.</p>
+            <h2>مدیریت و افزودن اعضای جدید</h2>
+            
+            <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                <input type="text" id="member-input" placeholder="نام عضو جدید..." style="padding: 10px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: white; flex: 1;">
+                <button type="button" onclick="handleAddMember()" style="padding: 10px 20px; background: #0284c7; color: white; border: none; border-radius: 8px; cursor: pointer;">افزودن عضو</button>
+            </div>
+
+            
+            <ul id="member-list" style="list-style: none; padding: 0;"></ul>
         </section>
 
     </main>

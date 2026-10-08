@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="fa" dir="rtl">
 
 <head>
+    <meta charset="UTF-8">
     <title>وسایل مورد نیاز</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -9,8 +10,8 @@
 <body>
 
     <header>
-        <h1>وسایل مورد نیاز</h1>
-        <p>چک کردن وسایل لازم برای سفر</p>
+        <h1>وسایل مورد نیاز سفر</h1>
+        <p>لیست کامل چک‌لیست لوازم سفر</p>
     </header>
 
     <nav>
@@ -26,29 +27,21 @@
 
         <h2 class="title">لیست وسایل</h2>
 
-        <section class="cards">
+        <section class="cards" id="items-cards-container"></section>
 
-            <div class="card">
-                <h3>وسایل شخصی</h3>
-                <p>👕  لباس مناسب</p>
-                <p>👟  کفش مناسب</p>
-                <p>🧴  وسایل بهداشتی</p>
+        
+        <section class="info" style="margin-top: 35px;">
+            <h2>چک‌لیست وسایل سفر</h2>
+
+            <p id="item-stats" style="color: #38bdf8; font-weight: bold; margin-bottom: 15px;">وضعیت آمادگی: ۰ از ۰ وسیله (۰٪ آماده شده)</p>
+
+            <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                <input type="text" id="item-input" placeholder="نام وسیله جدید..." style="flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: white;">
+                <button type="button" onclick="handleAddItem()" style="padding: 10px 20px; background: #0284c7; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">افزودن وسیله</button>
             </div>
 
-            <div class="card">
-                <h3>وسایل ضروری</h3>
-                <p>🔌  شارژر موبایل</p>
-                <p>🪪  مدارک شناسایی</p>
-                <p>💊  داروهای ضروری</p>
-            </div>
-
-            <div class="card">
-                <h3>وسایل سفر</h3>
-                <p>🎒  کوله‌پشتی</p>
-                <p>💧  بطری آب</p>
-                <p>🕶️  عینک آفتابی</p>
-            </div>
-
+            
+            <ul id="item-list" style="list-style: none; padding: 0;"></ul>
         </section>
 
     </main>
