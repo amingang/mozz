@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <title>وسایل مورد نیاز</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-
     <header>
         <h1>وسایل مورد نیاز سفر</h1>
         <p>لیست کامل چک‌لیست لوازم سفر</p>
@@ -24,30 +22,18 @@
     </nav>
 
     <main>
-
         <h2 class="title">لیست وسایل</h2>
-
         <section class="cards" id="items-cards-container"></section>
 
-        
-        <section class="info" style="margin-top: 35px;">
+        <section class="info section-spaced">
             <h2>چک‌لیست وسایل سفر</h2>
-
-            <p id="item-stats" style="color: #38bdf8; font-weight: bold; margin-bottom: 15px;">وضعیت آمادگی: ۰ از ۰ وسیله (۰٪ آماده شده)</p>
-
-            <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-                <input type="text" id="item-input" placeholder="نام وسیله جدید..." style="flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: white;">
-                <button type="button" onclick="handleAddItem()" style="padding: 10px 20px; background: #0284c7; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">افزودن وسیله</button>
+            <p class="item-stats" id="item-stats">وضعیت آمادگی: ۰ از ۰ وسیله (۰٪ آماده شده)</p>
+            <div class="form-row">
+                <input class="form-control" type="text" id="item-input" placeholder="نام وسیله جدید...">
+                <button class="primary-button" type="button" data-action="add-item">افزودن وسیله</button>
             </div>
-
-            
-            <ul id="item-list" style="list-style: none; padding: 0;"></ul>
+            <ul class="list-reset" id="item-list"></ul>
         </section>
-
     </main>
-
-    <script src="script.js"></script>
-
 </body>
-
 </html>

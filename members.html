@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <title>اعضای سفر</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-
     <header>
         <h1>اعضای سفر</h1>
         <p>اعضای گروه سفر</p>
@@ -24,12 +22,9 @@
     </nav>
 
     <main>
-
         <h2 class="title">اعضای گروه</h2>
-
         <section class="cards" id="members-cards-container"></section>
 
-        
         <section class="info">
             <h2>تعداد اعضا</h2>
             <p id="member-count-text">در این سفر ۰ نفر حضور دارند.</p>
@@ -37,20 +32,12 @@
 
         <section class="info">
             <h2>مدیریت و افزودن اعضای جدید</h2>
-            
-            <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-                <input type="text" id="member-input" placeholder="نام عضو جدید..." style="padding: 10px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: white; flex: 1;">
-                <button type="button" onclick="handleAddMember()" style="padding: 10px 20px; background: #0284c7; color: white; border: none; border-radius: 8px; cursor: pointer;">افزودن عضو</button>
+            <div class="form-row">
+                <input class="form-control" type="text" id="member-input" placeholder="نام عضو جدید...">
+                <button class="primary-button" type="button" data-action="add-member">افزودن عضو</button>
             </div>
-
-            
-            <ul id="member-list" style="list-style: none; padding: 0;"></ul>
+            <ul class="list-reset" id="member-list"></ul>
         </section>
-
     </main>
-
-    <script src="script.js"></script>
-
 </body>
-
 </html>

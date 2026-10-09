@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <title>هزینه‌های سفر</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-
     <header>
         <h1>هزینه‌های سفر</h1>
         <p>مدیریت هزینه‌های سفر گروهی</p>
@@ -24,38 +22,26 @@
     </nav>
 
     <main>
-
         <h2 class="title">کارت هزینه‌ها</h2>
-
-        <!-- کارت‌های سفید هزینه‌ها توسط JS به صورت پویا اینجا ساخته می‌شوند -->
         <section class="cards" id="expenses-cards-container"></section>
 
-        <!-- بخش ثبت و مدیریت هزینه‌ها -->
-        <section class="info" style="margin-top: 35px;">
+        <section class="info section-spaced">
             <h2>ثبت و مدیریت هزینه‌ها</h2>
-
-            <div style="margin-bottom: 20px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px;">
-                <h3 id="total-expense" style="margin: 0 0 10px 0; color: #38bdf8;">مجموع هزینه‌ها: ۰ تومان</h3>
-                <p id="per-person-expense" style="margin: 0; color: #cbd5e1;">سهم متوسط هر نفر: ۰ تومان</p>
+            <div class="expense-summary">
+                <h3 id="total-expense">مجموع هزینه‌ها: ۰ تومان</h3>
+                <p id="per-person-expense">سهم متوسط هر نفر: ۰ تومان</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
-                <input type="text" id="exp-title" placeholder="عنوان هزینه (مثلاً بنزین)" style="padding: 10px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: white;">
-                <input type="number" id="exp-amount" placeholder="مبلغ (تومان)" style="padding: 10px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: white;">
-                <input type="text" id="exp-category" placeholder="دسته‌بندی (حمل‌ونقل، خوراکی)" style="padding: 10px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: white;">
-                <input type="text" id="exp-payer" placeholder="پرداخت‌کننده" style="padding: 10px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: white;">
+            <div class="expense-input-grid">
+                <input class="form-control" type="text" id="exp-title" placeholder="عنوان هزینه (مثلاً بنزین)">
+                <input class="form-control" type="number" id="exp-amount" min="1" placeholder="مبلغ (تومان)">
+                <input class="form-control" type="text" id="exp-category" placeholder="دسته‌بندی (حمل‌ونقل، خوراکی)">
+                <input class="form-control" type="text" id="exp-payer" placeholder="پرداخت‌کننده">
             </div>
-            
-            <button type="button" onclick="handleAddExpense()" style="width: 100%; padding: 12px; background: #0284c7; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; margin-bottom: 20px;">ثبت هزینه</button>
 
-            <!-- لیست هزینه‌ها جهت حذف -->
-            <ul id="expense-list" style="list-style: none; padding: 0;"></ul>
+            <button class="primary-button primary-button-wide" type="button" data-action="add-expense">ثبت هزینه</button>
+            <ul class="list-reset" id="expense-list"></ul>
         </section>
-
     </main>
-
-    <script src="script.js"></script>
-
 </body>
-
 </html>
